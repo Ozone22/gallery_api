@@ -1,5 +1,11 @@
 require "rails_helper"
 
-RSpec.describe User, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+describe User, type: :model do
+  subject(:user) { described_class.new(attributes_for(:user)) }
+
+  it { is_expected.to respond_to :email }
+  it { is_expected.to respond_to :password }
+  it { is_expected.to respond_to :full_name }
+
+  it { is_expected.to be_valid }
 end

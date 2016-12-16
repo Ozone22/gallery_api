@@ -15,12 +15,20 @@ module V1
     end
 
     def show
+      render json: user
     end
 
     def update
+      if user.update_attributes(user_params)
+        head :no_content
+      else
+        respond_with :v1, user
+      end
     end
 
     def destroy
+      user.destroy!
+      head :no_content
     end
 
     private
