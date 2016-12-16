@@ -6,6 +6,8 @@ gem "puma", "~> 3.0"
 
 # Other gems
 gem "rack-cors"
+gem "carrierwave", ">= 1.0.0.rc", "< 2.0"
+gem "cloudinary"
 gem "decent_exposure"
 gem "active_model_serializers", git: "https://github.com/rails-api/active_model_serializers.git"
 gem "interactor"

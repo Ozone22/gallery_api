@@ -5,3 +5,5 @@ en:
       attributes:
         email:
           wrong_email: "Email format error"
+        image:
+          large_size: "File size should be less, than 6 megabytes"
