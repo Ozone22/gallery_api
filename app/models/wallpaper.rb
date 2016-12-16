@@ -1,6 +1,8 @@
 class Wallpaper < ApplicationRecord
   mount_uploader :image, ImageUploader
 
+  before_destroy { remove_image! }
+
   belongs_to :user
 
   validates :user_id, presence: true
