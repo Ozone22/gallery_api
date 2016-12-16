@@ -15,6 +15,9 @@ AllCops:
 Bundler/OrderedGems:
   Enabled: false
 
+Style/EmptyMethod:
+  Enabled: false
+
 Style/Documentation:
   Description: 'Document classes and non-namespace modules.'
   Enabled: false
