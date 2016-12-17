@@ -7,6 +7,8 @@ describe Wallpaper, type: :model do
   it { is_expected.to respond_to :user }
   it { is_expected.to respond_to :name }
   it { is_expected.to respond_to :image }
+  it { is_expected.to respond_to :likes }
+  it { is_expected.to respond_to :likes_count }
 
   it { is_expected.to be_valid }
 end
