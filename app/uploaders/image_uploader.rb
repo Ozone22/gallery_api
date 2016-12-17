@@ -1,12 +1,7 @@
 class ImageUploader < CarrierWave::Uploader::Base
   include Cloudinary::CarrierWave
 
-  def store_dir
-    "gallery_images/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
-  end
-
   version :thumb do
-    eager
     resize_to_fit(300, 300)
     cloudinary_transformation quality: 80
   end

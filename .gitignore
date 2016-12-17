@@ -20,5 +20,8 @@
 # Ignore Byebug command history file.
 .byebug_history
 
-#Ignore sensitive data
+# Ignore sensitive data
 .env
+
+# Doc data(can be generated manually)
+/doc/*
