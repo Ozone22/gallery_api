@@ -11,7 +11,5 @@ class JWTWrapper
   def self.decode(token)
     decoded_token = JWT.decode(token, Rails.application.secrets.jwt_secret)
     HashWithIndifferentAccess.new(decoded_token.first)
-  rescue
-    nil
   end
 end

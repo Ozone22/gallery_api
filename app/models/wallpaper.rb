@@ -5,6 +5,7 @@ class Wallpaper < ApplicationRecord
 
   belongs_to :user
   has_many :likes, dependent: :destroy
+  has_many :likers, through: :likes, source: :user
 
   validates :user_id, presence: true
   validates :name, presence: true, length: { in: 1..180 }

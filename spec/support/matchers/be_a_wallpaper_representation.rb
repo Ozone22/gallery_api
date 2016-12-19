@@ -5,6 +5,7 @@ RSpec::Matchers.define :be_a_wallpaper_representation do |wallpaper|
       user_id
       name
       image
+      likes_count
     )
 
     expect(json).to be

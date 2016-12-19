@@ -2,6 +2,7 @@ class ApplicationController < ActionController::API
   include Authentication
 
   respond_to :json
+  serialization_scope :current_user
 
   protected
 
