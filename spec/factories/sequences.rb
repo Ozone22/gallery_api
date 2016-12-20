@@ -3,4 +3,5 @@ FactoryGirl.define do
   sequence(:email) { Faker::Internet.email }
   sequence(:full_name) { Faker::Name.name }
   sequence(:random_name) { Faker::Lorem.word }
+  sequence(:text) { Faker::Lorem.sentence }
 end

@@ -3,6 +3,7 @@ class User < ApplicationRecord
 
   has_many :wallpapers, dependent: :destroy
   has_many :likes, dependent: :destroy
+  has_many :comments, dependent: :destroy
 
   validates :email, presence: true, email: true, uniqueness: { case_sensitive: false }
   validates :password, presence: true, length: { in: 5..100 }
