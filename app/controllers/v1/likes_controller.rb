@@ -14,8 +14,9 @@ module V1
     end
 
     def destroy
-      like = Like.find_by(user: current_user, wallpaper: wallpaper)
-      like&.destroy
+      if like = Like.find_by(user: current_user, wallpaper: wallpaper)
+        like.destroy
+      end
       head :no_content
     end
   end
