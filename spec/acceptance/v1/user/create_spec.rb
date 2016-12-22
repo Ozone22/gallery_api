@@ -8,6 +8,7 @@ resource "Users" do
     with_options scope: :user, required: true do
       parameter :email, "Email"
       parameter :password, "Password"
+      parameter :password_confirmation, "Password Confirmation"
       parameter :full_name, "Name(can be full name)"
     end
 
