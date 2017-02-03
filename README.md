@@ -1,24 +1,13 @@
-# README
+# API для галереи
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+На данный момент реализована возможность:
 
-Things you may want to cover:
+* Зарегестрироваться и получить JWT токен
 
-* Ruby version
+* Загрузить свою картинку на сервис Claudinary(можно загрузить напрямую с клиента на сервис, либо сразу на бэк)
 
-* System dependencies
+* Лайкнуть понравившуюся картинку
 
-* Configuration
+* Прокомментить картинку
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Написаны тесты, валидация, сгенерирована документация по API для клиента
