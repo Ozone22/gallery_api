@@ -15,6 +15,7 @@ gem "responders"
 gem "jwt"
 gem "bcrypt"
 gem "pundit"
+gem "kaminari", git: "https://github.com/amatsuda/kaminari"
 
 group :test do
   gem "capybara"

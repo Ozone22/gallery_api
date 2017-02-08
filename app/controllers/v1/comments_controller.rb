@@ -5,7 +5,7 @@ module V1
 
     expose(:comment)
     expose(:wallpaper)
-    expose(:comments) { wallpaper.comments.order(:created_at) }
+    expose(:comments) { paginated_comments }
 
     def create
       comment.user = current_user
@@ -27,6 +27,11 @@ module V1
     end
 
     private
+
+    def paginated_comments
+      comments = wallpaper.comments.order(:created_at)
+      comments.page(params[:page]).per(params[:per_page] || 10)
+    end
 
     def comment_params
       params.require(:comment).permit(:text)

@@ -4,7 +4,7 @@ module V1
     before_action :authorize_user, only: %i(update destroy)
 
     expose(:wallpaper)
-    expose(:wallpapers) { Wallpaper.all }
+    expose(:wallpapers) { paginated_wallpapers }
 
     def create
       wallpaper.user = current_user
@@ -37,6 +37,10 @@ module V1
     end
 
     private
+
+    def paginated_wallpapers
+      Wallpaper.page(params[:page]).per(params[:per_page] || 5)
+    end
 
     def wallpaper_params
       params.require(:wallpaper).permit(:name, :image)
